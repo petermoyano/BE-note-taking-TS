@@ -23,6 +23,7 @@ INSERT INTO tags (label) VALUES
   ('Excercise');
   
 INSERT INTO notes (title, markdown, tagIds) VALUES
+("Async functions return promises. How do you resolve an async function. How do you reject it?": "You resolve it by returning the function and you reject the promise by throwing an error inside the async function. If the promise is rejected it will automatically throw an error.", 2),
 (
         'State is tied to a position to a DOM tree.',
         'It means that React associates each piece of state with the correct component by where the component sits in the UI tree. Same component at the same position preserves state! Use keys to help React distinguish between same components at the same position in the UI tree.',
