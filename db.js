@@ -1,9 +1,11 @@
-const { Client } = require("pg");
+const Pool = require("pg").Pool;
 
-let db = new Client({
-    connectionString: "postgres://note-db",
+let pool = new Pool({
+    user: "postgres",
+    host: "localhost",
+    database: "notes",
+    password: "postgres",
+    port: 5432,
 });
 
-db.connect();
-
-module.exports = db;
+module.exports = pool;
