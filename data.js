@@ -1,4 +1,4 @@
-\c notes
+export const seedDB = `\c notes
 
 DROP TABLE IF EXISTS notes;
 DROP TABLE IF EXISTS tags;
@@ -209,7 +209,4 @@ INSERT INTO notes (title, markdown, tagIds) VALUES
         'What does typeof NaN returns',
       'typeof NaN returns "number"!!',
       1
-      );
-
-
-
+      );`;
