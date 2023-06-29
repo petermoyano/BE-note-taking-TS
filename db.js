@@ -1,4 +1,4 @@
-import { seedDB } from "./data";
+const seedDB = require("./data");
 const Pool = require("pg").Pool;
 
 let pool = new Pool({
