@@ -23,6 +23,11 @@ INSERT INTO tags (label) VALUES
   ('Excercise');
   
 INSERT INTO notes (title, markdown, tagIds) VALUES
+(
+        'State is tied to a position to a DOM tree.',
+        'It means that React associates each piece of state with the correct component by where the component sits in the UI tree. Same component at the same position preserves state! Use keys to help React distinguish between same components at the same position in the UI tree.',
+        1
+    ),
     (
         'What are the 5 possible states of the position property?',
         'static (default), relative, absolute, fixed (you always see it), sticky (mix between absolute and fixed)',

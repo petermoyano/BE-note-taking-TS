@@ -12,7 +12,7 @@ const getNoteById = async (req, res, next) => {
     const id = parseInt(req.params.id);
     pool.query(queries.getNoteById, [id], (err, result) => {
         if (err) throw err;
-        res.status(201).send("Note created");
+        res.status(200).json(result.rows);
     });
 };
 
@@ -20,7 +20,7 @@ const createNote = async (req, res, next) => {
     const { title, markdown } = req.body;
     pool.query(queries.createNote, [title, markdown], (err, result) => {
         if (err) throw err;
-        res.status(200).json(result.rows);
+        res.status(201).send("Note created!");
     });
 };
 
