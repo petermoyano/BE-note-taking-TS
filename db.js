@@ -4,7 +4,7 @@ config();
 
 let pool = new Pool({
     connectionString: process.env.DATABASE_URL,
-    ssl: true,
+    //ssl: true,
     // user: "postgres",
     // host: "localhost",
     // database: "notes",
