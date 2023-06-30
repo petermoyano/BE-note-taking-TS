@@ -11,9 +11,13 @@ app.get("/", (req, res) => {
     res.send("Home of BE");
 });
 
-app.get("/ping", async (req, res) => {
-    const result = await pool.query("SELECT NOW()");
-    return res.json(result.rows[0]);
+app.get("/ping", async (req, res, next) => {
+    try {
+        const result = await pool.query("SELECT NOW()");
+        return res.json(result.rows[0]);
+    } catch (error) {
+        console.log("An error just ocurred!", error);
+    }
 });
 
 app.use("/notes", notesRoutes);
