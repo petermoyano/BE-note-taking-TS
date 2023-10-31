@@ -23,6 +23,7 @@ INSERT INTO tags (label) VALUES
   ('Excercise');
   
 INSERT INTO notes (title, markdown, tagIds) VALUES
+("How can you erase the contents of an Object?":"You can use the delete operator and a for...in (not a for...of) to iterate through the all keys and erase them one at a time.", 2),
 ("Async functions return promises. How do you resolve an async function. How do you reject it?": "You resolve it by returning the function and you reject the promise by throwing an error inside the async function. If the promise is rejected it will automatically throw an error.", 2),
 (
         'State is tied to a position to a DOM tree.',
