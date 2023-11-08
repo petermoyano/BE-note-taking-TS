@@ -16,13 +16,17 @@ CREATE TABLE notes (
 );
 
 INSERT INTO tags (label) VALUES
-  ('React'),
+  ('React'), --1
   ('JavaScript'),
-  ('CSS'),
+  ('CSS'), --3
   ('TypeScript'),
-  ('Excercise');
+  ('Excercise'), --5
+  ('Python'),
+  ('AI') --7
   
 INSERT INTO notes (title, markdown, tagIds) VALUES
+("What are the previous steps you should try before fine tunning a LLM?": "Prompt enginnering, prompt chaining and function calling. Also you can try RAG to further give the LLM some relevant context.", 7),
+("There is a way to erase a list with splicing. What is it?": "my_list[::]", 6)
 ("How can you erase the contents of an Object?":"You can use the delete operator and a for...in (not a for...of) to iterate through the all keys and erase them one at a time.", 2),
 ("Async functions return promises. How do you resolve an async function. How do you reject it?": "You resolve it by returning the function and you reject the promise by throwing an error inside the async function. If the promise is rejected it will automatically throw an error.", 2),
 (
